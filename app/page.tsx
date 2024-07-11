@@ -1,3 +1,4 @@
+import HomeComponent from '@/components/Home/Home';
 
 export default function Home() {
 	return (
@@ -20,6 +21,7 @@ export default function Home() {
 					This is a feature-rich Next.js project starter template designed to provide a solid foundation for rapid
 					development of modern full-stack applications.
 				</p>
+				<HomeComponent />
 			</div>
 		</main>
 	);

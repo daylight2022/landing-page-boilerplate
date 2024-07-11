@@ -3,6 +3,25 @@ import Image from 'next/image';
 import Link from 'next/link';
 import { ThemeButton } from '@/components/ThemeButton';
 
+const links = [
+	{
+		label: 'Features',
+		href: '#Features',
+	},
+	{
+		label: 'Pricing',
+		href: '#Pricing',
+	},
+	{
+		label: 'Wall of Love',
+		href: '#WallOfLove',
+	},
+	{
+		label: 'FAQ',
+		href: '#FAQ',
+	},
+];
+
 const Header = () => {
 	return (
 		<header className="py-10">
@@ -14,9 +33,15 @@ const Header = () => {
 							<span className="text-blue-600">Next.js</span>
 							<span className="text-gray-950 dark:text-gray-300">Starter</span>
 						</Link>
-						<div className="hidden md:flex md:gap-x-6">
-							<></>
-						</div>
+						<ul className="hidden md:flex items-center gap-8">
+							{links.map((link) => (
+								<li key={link.label}>
+									<Link href={link.href} aria-label={link.label} title={link.label} className="">
+										{link.label}
+									</Link>
+								</li>
+							))}
+						</ul>
 					</div>
 					<div className="flex items-center gap-x-5">
 						<HeaderLinks></HeaderLinks>
