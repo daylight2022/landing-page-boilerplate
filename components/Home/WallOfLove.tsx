@@ -1,7 +1,7 @@
 const WallOfLove = ({ id }: { id: string }) => {
 	return (
 		<>
-			<div>UserPurchaseAvatar</div>
+			<div>WallOfLove</div>
 		</>
 	);
 };
