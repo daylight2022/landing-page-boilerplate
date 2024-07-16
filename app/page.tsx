@@ -27,12 +27,21 @@ export default function LandingHome() {
 			description6: '',
 		},
 		pricing: {
-			title: "Pricing",
-			title2: "Get unlimited access.",
+			title: 'Pricing',
+			title2: 'Get unlimited access.',
 			description: 'This page you are currently viewing is an open-source, free boilerplate.',
-			doYouLike: "喜欢这个落地页模板吗？",
-			follow: "联系我们。"
-		}
+			doYouLike: '喜欢这个落地页模板吗？',
+			follow: '联系我们。',
+		},
+		wallOfLove: {
+			title: 'Wall of Love',
+			description:
+				'If you use this landing page template and recommend it on your Twitter, please let me know. I will display your tweet and recommendation here.',
+		},
+		FQA: {
+			title: 'FQA',
+			description: 'Frequently Asked Questions',
+		},
 	};
 	return (
 		<>
@@ -44,11 +53,11 @@ export default function LandingHome() {
 			{/* USP (Unique Selling Proposition) */}
 			<Feature id="Feature" locale={dict.feature} />
 			{/* Pricing */}
-			<Pricing id="Pricing" locale={dict.pricing}/>
+			<Pricing id="Pricing" locale={dict.pricing} />
 			{/* Testimonials / Wall of Love */}
-			<WallOfLove id="WallOfLove" />
+			<WallOfLove id="WallOfLove" locale={dict.wallOfLove} />
 			{/* FQA (Frequently Asked Questions) */}
-			<FQA />
+			<FQA id="FQA" locale={dict.FQA} />
 			{/* CTA (Call to Action) */}
 			<CTA locale={dict.cta} />
 		</>

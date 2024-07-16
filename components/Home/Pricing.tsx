@@ -4,6 +4,7 @@ import { siteConfig } from '@/config/site';
 import { Link } from 'lucide-react';
 import { FaCheck } from 'react-icons/fa';
 import { RoughNotation } from 'react-rough-notation';
+import Title from './atoms/title';
 
 const pricing = [
 	{
@@ -27,15 +28,7 @@ const pricing = [
 const Pricing = ({ id, locale }: { id: string; locale: any }) => {
 	return (
 		<section className="flex flex-col justify-center items-center max-w-4xl pt-16">
-			<div className="flex flex-col text-center max-w-xl">
-				<h2 className="text-center text-white">
-					<RoughNotation type="highlight" show color="#2563EB">
-						{locale.title}
-					</RoughNotation>
-				</h2>
-        <h3 className='my-2 text-4xl font-medium tracking-tight'>{locale.title2}</h3>
-        <p className='my-4 text-lg text-slate-500'>{locale.description}</p>
-			</div>
+			<Title locale={locale}></Title>
 			<div className="grid grid-cols-1 gap-2 sm:grid-cols-2 justify-items-center">
 				{pricing?.map((p) => (
 					<Card key={p.key} className="p-3 flex-1 w-[90%]">
