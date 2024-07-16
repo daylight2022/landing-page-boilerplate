@@ -1,90 +1,32 @@
 import { TwitterX } from '@/components/scoial-icons/icons';
-import { SiteConfig } from '@/types/siteConfig';
-
+import { siteConfig } from '@/config/site';
 import Image from 'next/image';
 import Link from 'next/link';
 import { RoughNotation } from 'react-rough-notation';
-import Title from './atoms/title';
+import { WALL_OF_LOVE } from '@/config/wallOfLove';
 
 const WallOfLove = ({ id, locale }: { id: string; locale: any }) => {
-	const WALL_OF_LOVE = [
-		{
-			user: {
-				name: 'Founder',
-				username: 'weijunext',
-				image: '/images/users/1.png',
-			},
-			content:
-				"As a front-end developer, I'm highly satisfied with this landing page template. Editing text and images was very intuitive, and I encountered no technical hurdles throughout the process. The template's responsive design is excellent as well; whether on mobile or desktop, the page layout adapts perfectly. I managed to launch my own product's landing page in just half a day, significantly boosting my efficiency.",
-		},
-		{
-			user: {
-				name: 'User1',
-				username: 'weijunext',
-				image: '/images/users/1.png',
-			},
-			content:
-				'This template has given me a new perspective on coding. As a backend developer with not much front-end experience, I found this template to be very user-friendly. I could build a professional-looking landing page with hardly any coding required. This not only saved me time but also sparked more interest in front-end development.',
-		},
-		{
-			user: {
-				name: 'User2',
-				username: 'weijunext',
-				image: '/images/users/2.png',
-			},
-			content:
-				"As a developer who transitioned from design, I'm impressed with the aesthetic design of this template. It's not only easy to use but also comes with a default design that feels both modern and professional. I made some adjustments to the details to match my brand style, and the entire process was both simple and enjoyable.",
-		},
-		{
-			user: {
-				name: 'User3',
-				username: 'weijunext',
-				image: '/images/users/3.png',
-			},
-			content:
-				'The performance of this template is outstanding, with very fast loading times and SEO-friendly features. As a developer focused on product optimization, I appreciate the high performance and optimization of the template. With simple modifications, I was able to further optimize my landing page, improving the speed at which users can access it. The SEO friendliness of the template also helped my page achieve better rankings in search engines.',
-		},
-		{
-			user: {
-				name: 'User4',
-				username: 'weijunext',
-				image: '/images/users/4.png',
-			},
-			content:
-				'The interactive elements of this template added a lot of fun to my project. I particularly liked the settings for animations and transition effects, which made the browsing experience richer and more dynamic. Adjusting these interactive elements was very straightforward, requiring no deep front-end knowledge, which was very user-friendly for a non-professional front-end developer like me.',
-		},
-		{
-			user: {
-				name: 'User5',
-				username: 'weijunext',
-				image: '/images/users/5.png',
-			},
-			content:
-				'This template does a great job with multi-language support, which is crucial for my international project. I was able to easily add different language versions, and the template ensured consistency in layout and design across various languages. This significantly reduced my workload in the localization process and helped me reach global users more quickly.',
-		},
-		{
-			user: {
-				name: 'User6',
-				username: 'weijunext',
-				image: '/images/users/4.png',
-			},
-			content:
-				'The interactive elements of this template added a lot of fun to my project. I particularly liked the settings for animations and transition effects, which made the browsing experience richer and more dynamic. Adjusting these interactive elements was very straightforward, requiring no deep front-end knowledge, which was very user-friendly for a non-professional front-end developer like me.',
-		},
-		{
-			user: {
-				name: 'User7',
-				username: 'weijunext',
-				image: '/images/users/5.png',
-			},
-			content:
-				'This template does a great job with multi-language support, which is crucial for my international project. I was able to easily add different language versions, and the template ensured consistency in layout and design across various languages. This significantly reduced my workload in the localization process and helped me reach global users more quickly.',
-		},
-	];
-
 	return (
 		<section id={id} className="flex flex-col justify-center items-center pt-16 gap-12 max-w-[88%]">
-			<Title locale={locale}></Title>
+			<div className="flex flex-col text-center max-w-xl gap-4">
+				<h2 className="text-center text-white">
+					<RoughNotation type="highlight" show={true} color="#2563EB">
+						{locale.title}
+					</RoughNotation>
+				</h2>
+				<p className="text-large text-default-500">
+					{/* Don't take our word for it. Here's what they have to say. */}
+					{locale.description1}{' '}
+					<Link
+						href={siteConfig.authors[0].twitter as string}
+						target="_blank"
+						rel="noopener noreferrer nofollow"
+						className="text-primary underline">
+						{locale.description2}
+					</Link>
+					{locale.description3}
+				</p>
+			</div>
 			<div className="columns-1 sm:columns-2 lg:columns-3 xl:columns-4 gap-4 relative transition-all">
 				{WALL_OF_LOVE?.map((testimonial, index) => (
 					<div className="mb-4 z-0 break-inside-avoid-column" key={index}>

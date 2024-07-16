@@ -1,7 +1,7 @@
 import { SiteConfig } from '@/types/siteConfig';
 import { BsGithub, BsTwitterX, BsWechat } from 'react-icons/bs';
-import { MdEmail } from "react-icons/md";
-import { SiBuymeacoffee, SiJuejin } from "react-icons/si";
+import { MdEmail } from 'react-icons/md';
+import { SiBuymeacoffee, SiJuejin } from 'react-icons/si';
 
 export const baseConfig = {
 	name: 'Next.js Starter',
@@ -13,21 +13,19 @@ export const baseConfig = {
 		{
 			name: 'Kody',
 			url: '',
+			twitter: '',
 		},
 	],
 	creator: '@Kody',
+	openSourceURL: 'https://github.com/daylight2022/landing-page-boilerplate',
 	headerLinks: [{ name: 'repo', href: 'https://github.com/daylight2022/nextjs-starter', icon: BsGithub }],
 	footerLinks: [
-    {name: 'email', href: '', icon: MdEmail},
-    {name: 'github', href:'https://github.com/daylight2022/nextjs-starter', icon: BsGithub },   
-    { name: 'juejin', href: "", icon: SiJuejin },
-    { name: 'weChat', href: "", icon: BsWechat }
-
-
-  ],
-	footerProducts: [
-    {url: 'https://daylight2022.github.io/', name: 'Hyacinthの博客'}
-  ],
+		{ name: 'email', href: '', icon: MdEmail },
+		{ name: 'github', href: 'https://github.com/daylight2022/nextjs-starter', icon: BsGithub },
+		{ name: 'juejin', href: '', icon: SiJuejin },
+		{ name: 'weChat', href: '', icon: BsWechat },
+	],
+	footerProducts: [{ url: 'https://daylight2022.github.io/', name: 'Hyacinthの博客' }],
 	defaultNextTheme: 'system', // next-theme option: system | dark | light
 };
 

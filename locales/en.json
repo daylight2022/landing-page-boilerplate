@@ -1,0 +1,43 @@
+{
+  "Hero": {
+    "title1": "Ship",
+    "title2": "Landing Page",
+    "title3": "Fast",
+    "description": "A free, open-source tool with rich features for quickly building websites."
+  },
+  "SocialProof": {
+    "maker": "makers ship fast"
+  },
+  "Feature": {
+    "title": "Feature"
+  },
+  "Pricing": {
+    "title": "Pricing",
+    "title2": "Get unlimited access.",
+    "description": "This page you are currently viewing is an open-source, free boilerplate.",
+    "doYouLike": "Do you like this langing page boilerplate?",
+    "follow": "Follow me."
+  },
+  "WallOfLove": {
+    "title": "Wall of Love",
+    "description1": "If you use this landing page template and recommend it on your Twitter,",
+    "description2": "please let me know",
+    "description3": ". I will display your tweet and recommendation here."
+  },
+  "FQA": {
+    "title": "FQA",
+    "description": "Frequently Asked Questions"
+  },
+  "CTA": {
+    "title": "Build Your Landing Page Now",
+    "description1": "Build",
+    "description2": "your landing page,",
+    "description3": "show",
+    "description4": "your product, and",
+    "description5": "start earning!",
+    "description6": ""
+  },
+  "CTAButton": {
+    "title": "Get Boilerplate"
+  }
+}

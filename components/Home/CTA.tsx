@@ -1,7 +1,7 @@
 import CTAButton from './CTAButton';
 import { RoughNotation } from 'react-rough-notation';
 
-const CTA = ({ locale }: { locale: any }) => {
+const CTA = ({ locale, CTALocale }: { locale: any; CTALocale: any }) => {
 	return (
 		<section className="flex flex-col items-center justify-center max-w-[88%] py-16 gap-12">
 			<div className="flex flex-col text-center gap-4">
@@ -22,7 +22,7 @@ const CTA = ({ locale }: { locale: any }) => {
 				</p>
 			</div>
 
-			<CTAButton></CTAButton>
+			<CTAButton locale={CTALocale}></CTAButton>
 		</section>
 	);
 };

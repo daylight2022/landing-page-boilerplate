@@ -1,61 +1,74 @@
-import { Button } from '@/components/ui/button';
-import { Card, CardContent, CardDescription, CardFooter, CardHeader, CardTitle } from '@/components/ui/card';
+"use client"
+import { Button, Card, CardBody, CardFooter, CardHeader, Divider, Link, Spacer } from '@nextui-org/react';
 import { siteConfig } from '@/config/site';
-import { Link } from 'lucide-react';
+import { ALL_TIERS } from '@/config/tiers';
 import { FaCheck } from 'react-icons/fa';
 import { RoughNotation } from 'react-rough-notation';
-import Title from './atoms/title';
 
-const pricing = [
-	{
-		key: 'free',
-		title: 'Your call has been confirmed.',
-		description: '1 hour ago',
-		price: '免费',
-		features: ['免费', '访问全部代码', '二次开发', 'MIT 许可证'],
-		buttonText: '开始',
-	},
-	{
-		key: 'customization',
-		title: 'You have a new message!',
-		description: '1 hour ago',
-		price: '$199',
-		features: ['访问全部代码', '二次开发', '更多风格样式', '一对一服务', '更精致的页面'],
-		buttonText: '购买',
-	},
-];
-
-const Pricing = ({ id, locale }: { id: string; locale: any }) => {
+const Pricing = ({ id, locale, langName }: { id: string; locale: any; langName: any }) => {
+	const TIERS = ALL_TIERS[`TIERS_${langName.toUpperCase()}`];
 	return (
-		<section className="flex flex-col justify-center items-center max-w-4xl pt-16">
-			<Title locale={locale}></Title>
+		<section id={id} className="flex flex-col justify-center items-center max-w-4xl pt-16">
+			<div className="flex flex-col text-center max-w-xl">
+				<h2 className="text-center text-white">
+					<RoughNotation type="highlight" show={true} color="#2563EB">
+						{locale.title}
+					</RoughNotation>
+				</h2>
+				<h3 className="text-4xl font-medium tracking-tight">{locale.title2}</h3>
+				<Spacer y={4} />
+				<p className="text-large text-default-500">{locale.description}</p>
+			</div>
+			<Spacer y={8} />
 			<div className="grid grid-cols-1 gap-2 sm:grid-cols-2 justify-items-center">
-				{pricing?.map((p) => (
-					<Card key={p.key} className="p-3 flex-1 w-[90%]">
-						<CardHeader>
-							<CardTitle>{p.title}</CardTitle>
-							<CardDescription>{p.description}</CardDescription>
+				{TIERS?.map((tier) => (
+					<Card key={tier.key} className="p-3 flex-1 w-[90%]">
+						<CardHeader className="flex flex-col items-start gap-2 pb-6">
+							<h2 className="text-lg font-medium">{tier.title}</h2>
+							<p className="text-medium text-slate-500">{tier.description}</p>
 						</CardHeader>
-						<CardContent className="grid gap-4">
-							<p></p>
+						<Divider></Divider>
+						<CardBody className="gap-8">
+							<p className="flex items-baseline pt-2">
+								<span className="inline bg-gradient-to-br from-foreground to-foreground-600 bg-clip-text text-2xl font-semibold leading-7 tracking-tight text-transparent">
+									{tier.price}
+								</span>
+							</p>
 							<ul>
-								{p.features?.map((feature) => (
+								{tier.features?.map((feature) => (
 									<li key={feature} className="flex items-center gap-2">
-										<FaCheck className="h-4 w-4 text-blue-500" />
+										<FaCheck className="text-blue-500" />
 										<p className="text-slate-500">{feature}</p>
 									</li>
 								))}
 							</ul>
-						</CardContent>
+						</CardBody>
 						<CardFooter>
-							<Button className="w-full">{p.buttonText}</Button>
+							<Button
+								fullWidth
+								as={Link}
+								href={tier.href}
+								color={tier.buttonColor}
+								variant={tier.buttonVariant}
+								target="_blank"
+								rel="noopener noreferrer nofollow">
+								{tier.buttonText}
+							</Button>
 						</CardFooter>
 					</Card>
 				))}
 			</div>
-			<div className="flex py-2 justify-center">
+			<Spacer y={12} />
+			<div className="flex py-2">
 				<p className="text-slate-400 text-center">
-					{locale.doYouLike} {locale.follow}
+					{locale.doYouLike}{' '}
+					<Link
+						color="foreground"
+						href={siteConfig.authors[0].twitter}
+						underline="always"
+						rel="noopener noreferrer nofollow">
+						{locale.follow}
+					</Link>
 				</p>
 			</div>
 		</section>
