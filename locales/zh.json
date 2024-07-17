@@ -6,38 +6,38 @@
     "description": "一个免费、开源且功能丰富的用于快速构建网站的工具"
   },
   "SocialProof": {
-    "maker": "makers ship fast"
+    "maker": "制作者快速开发"
   },
   "Feature": {
     "title": "Feature"
   },
   "Pricing": {
-    "title": "Pricing",
-    "title2": "Get unlimited access.",
-    "description": "This page you are currently viewing is an open-source, free boilerplate.",
+    "title": "定价",
+    "title2": "拥有无限访问权.",
+    "description": "您当前查看的页面是一个开源、免费的模板，您可以随意使用它。",
     "doYouLike": "喜欢这个落地页模板吗？",
     "follow": "联系我们。"
   },
   "WallOfLove": {
     "title": "Wall of Love",
-    "description1": "If you use this landing page template and recommend it on your Twitter,",
-    "description2": "please let me know",
-    "description3": ". I will display your tweet and recommendation here."
+    "description1": "如果你喜欢这个落地页，并且在推特上推荐了，",
+    "description2": "请告诉我",
+    "description3": "。我会在这里展示你的推文和推荐。"
   },
-  "FQA": {
-    "title": "FQA",
-    "description": "Frequently Asked Questions"
+  "FAQ": {
+    "title": "FAQs",
+    "description": "这里有一些最常见的问题"
   },
   "CTA": {
-    "title": "Build Your Landing Page Now",
-    "description1": "Build",
-    "description2": "your landing page,",
-    "description3": "show",
-    "description4": "your product, and",
-    "description5": "start earning!",
-    "description6": ""
+    "title": "立即构建你的落地页",
+    "description1": "构建",
+    "description2": "你的落地页,",
+    "description3": "展示",
+    "description4": "你的产品, 并开始",
+    "description5": "赚钱",
+    "description6": "！"
   },
   "CTAButton": {
-    "title": "Get Boilerplate"
+    "title": "获取模板"
   }
 }

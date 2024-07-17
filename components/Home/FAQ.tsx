@@ -9,7 +9,8 @@ function triggerResizeEvent() {
 	window.dispatchEvent(event);
 }
 
-const FQA = ({ id, locale, langName }: { id: string; locale: any; langName: any }) => {
+const FAQ = ({ id, locale, langName }: { id: string; locale: any; langName: any }) => {
+
 	const FAQS = ALL_FAQS[`FAQS_${langName.toUpperCase()}`];
 	return (
 		<section id={id} className="flex flex-col justify-center max-w-[88%] items-center py-16 gap-12">
@@ -44,4 +45,4 @@ const FQA = ({ id, locale, langName }: { id: string; locale: any; langName: any 
 	);
 };
 
-export default FQA;
+export default FAQ;

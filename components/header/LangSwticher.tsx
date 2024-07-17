@@ -8,7 +8,7 @@ export const LangSwticher = () => {
 	const params = useParams();
 	const lang = params.lang;
 
-	let langName = lang && lang[0] !== 'index' ? lang[0] : defaultLocale;
+	let langName = lang ? lang[0] : defaultLocale;
 	const router = useRouter();
 
 	const handleSwtchLanguage = (lang: string) => {
