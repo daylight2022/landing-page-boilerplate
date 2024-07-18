@@ -1,14 +1,14 @@
-import CTA from '@/components/Home/CTA';
-import Hero from '@/components/Home/Hero';
-import ScoialProof from '@/components/Home/SocialProof';
-import ScrollingLogos from '@/components/Home/ScrollingLogos';
-import Pricing from '@/components/Home/Pricing';
-import Feature from '@/components/Home/Feature';
-import WallOfLove from '@/components/Home/WallOfLove';
-import FAQ from '@/components/Home/FAQ';
+import CTA from '@/components/home/CTA';
+import Hero from '@/components/home/Hero';
+import ScoialProof from '@/components/home/SocialProof';
+import ScrollingLogos from '@/components/home/ScrollingLogos';
+import Pricing from '@/components/home/Pricing';
+import Feature from '@/components/home/Feature';
+import WallOfLove from '@/components/home/WallOfLove';
+import FAQ from '@/components/home/FAQ';
 import { defaultLocale, getDictionary } from '@/lib/i18n';
 
-export default async function LangHome({ params: { lang } }: { params: { lang: string } }) {
+export default async function Langhome({ params: { lang } }: { params: { lang: string } }) {
 	const langName = lang && lang[0] ? lang[0] : defaultLocale;
 	const dict = await getDictionary(langName);
 
